@@ -1,0 +1,10 @@
+<%- include('include/navbar.ejs')%>
+
+<form action="/reset" method="POST">
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <button type="submit" class="registerbtn">Submit</button>
+</form>
+
+<%- include('include/footer.ejs')%>

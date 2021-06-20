@@ -1,0 +1,46 @@
+<%- include('include/navbar.ejs')%>
+
+<!-- <h2>Index.....</h2> -->
+
+<!-- <div class="cart"> -->
+  
+<form action="/updateColony" method="POST">
+  <div class="container">
+    <h1>Edit Colony</h1>
+    <hr>
+    <input type="hidden" name="colonyId" value="<%= colony._id %>">
+    <label for="state"><b>State</b></label>
+    <input type="text" placeholder="Enter state" value="<%= colony.state%>" name="state" id="state" required>
+
+    <label for="city"><b>City</b></label>
+    <input type="text" placeholder="Enter city" name="city" value="<%= colony.city%>" id="city" required>
+
+    <label for="colonyName"><b>Colony Name</b></label>
+    <input type="text" placeholder="Enter Colony Name" name="colonyName" value="<%= colony.colonyName%>" id="colonyName" required>
+
+    <label for="area"><b>Area</b></label>
+    <input type="text" placeholder="Enter Area" name="area" value="<%= colony.area%>" id="area" required>
+
+    <label for="colonySize"><b>Colony Size</b></label>
+    <input type="text" placeholder="Enter Colony Size" name="colonySize" value="<%= colony.colonySize %>" id="colonySize" required>
+
+    <label for="noOfPlot"><b>No Of Plots</b></label>
+    <input type="text" placeholder="Enter No Of Plots" name="noOfPlot" value="<%= colony.noOfPlot %>" id="noOfPlot" required>
+
+    <label for="date"><b>Date</b></label>
+    <input type="Date" placeholder="Enter Date" name="date" value="<%= colony.date %>" id="date" ><br>
+
+    <label for="address"><b>Address</b></label>
+    <input type="text" placeholder="Enter Address" name="address" value="<%= colony.address %>" id="address" required>
+
+    <label for="otherInfo"><b>Other Info</b></label>
+    <input type="text" placeholder="Enter Other Info" name="otherInfo" value="<%= colony.otherInfo %>" id="otherInfo" required>
+
+    <hr>
+    <button type="submit" class="registerbtn">Add Colony</button>
+  </div>
+  
+</form>
+<!-- </div> -->
+
+<%- include('include/footer.ejs')%>

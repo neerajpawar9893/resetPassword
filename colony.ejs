@@ -1,0 +1,46 @@
+<%- include('include/navbar.ejs')%>
+
+<!-- <h2>Index.....</h2> -->
+
+<!-- <div class="cart"> -->
+  
+<form action="/colony" method="POST">
+  <div class="container">
+    <h1>Add Colony</h1>
+    <hr>
+
+    <label for="state"><b>State</b></label>
+    <input type="text" placeholder="Enter state" name="state" id="state" required>
+
+    <label for="city"><b>City</b></label>
+    <input type="text" placeholder="Enter city" name="city" id="city" required>
+
+    <label for="colonyName"><b>Colony Name</b></label>
+    <input type="text" placeholder="Enter Colony Name" name="colonyName" id="colonyName" required>
+
+    <label for="area"><b>Area</b></label>
+    <input type="text" placeholder="Enter Area" name="area" id="area" required>
+
+    <label for="colonySize"><b>Colony Size</b></label>
+    <input type="text" placeholder="Enter Colony Size" name="colonySize" id="colonySize" required>
+
+    <label for="noOfPlot"><b>No Of Plots</b></label>
+    <input type="text" placeholder="Enter No Of Plots" name="noOfPlot" id="noOfPlot" required>
+
+    <label for="date"><b>Date</b></label>
+    <input type="Date" placeholder="Enter Date" name="date" id="date" ><br>
+
+    <label for="address"><b>Address</b></label>
+    <input type="text" placeholder="Enter Address" name="address" id="address" required>
+
+    <label for="otherInfo"><b>Other Info</b></label>
+    <input type="text" placeholder="Enter Other Info" name="otherInfo" id="otherInfo" required>
+
+    <hr>
+    <button type="submit" class="registerbtn">Add Colony</button>
+  </div>
+  
+</form>
+<!-- </div> -->
+
+<%- include('include/footer.ejs')%>

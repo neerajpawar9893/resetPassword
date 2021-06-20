@@ -1,0 +1,50 @@
+<%- include('include/navbar.ejs')%>
+
+<h2>colony list</h2>
+<% if(colony.length !=0) { %>
+
+<table>
+    <tr>
+      <th>State</th>
+      <th>City</th>
+      <th>Colony Name</th>
+      <th>Area</th>
+      <th>Colony Size</th>
+      <th>No Of Plot</th>
+      <th>Date</th>
+      <th>Address</th>
+      <th>Other Info</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+
+    <% for (let col of colony ) {%>
+    <tr>
+      <td><%= col.state%></td>
+      <td><%= col.city%></td>
+      <td><%= col.colonyName%></td>
+      <td><%= col.area%></td>
+      <td><%= col.colonySize%></td>
+      <td><%= col.noOfPlot%></td>
+      <td><%= col.date%></td>
+      <td><%= col.address%></td>
+      <td><%= col.otherInfo%></td>
+      <td> 
+          <input type="hidden" name="colonyId" value="<%= col._id%>"> 
+          <a href="/editColony/<%= col._id%>?edit=true">Edit</a> 
+        </td>
+      <td> <form action="/deleteColony" method="POST">
+        <input type="hidden" name="colonyId" value="<%= col._id%>"> 
+        <button type="submit">Delete</button>
+    </form> </td>
+      
+    </tr>
+    <%}%>
+  </table>
+  <%} else { %>
+
+    <h1>Colony Not Found</h1>
+
+    <% } %>
+
+<%- include('include/footer.ejs')%>

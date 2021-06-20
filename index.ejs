@@ -1,0 +1,31 @@
+<%- include('include/navbar.ejs')%>
+
+<!-- <h2>Index.....</h2> -->
+
+<!-- <div class="cart"> -->
+  
+<form action="/" method="POST">
+  <div class="container">
+    <h1>Login</h1>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+    <hr>
+    <p> <a href="/reset">Forget Password?</a> </p>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Login</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Don't have an account? <a href="/signup">Sign Up</a>.</p>
+  </div>
+</form>
+<!-- </div> -->
+
+<%- include('include/footer.ejs')%>
